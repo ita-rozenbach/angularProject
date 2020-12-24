@@ -1,0 +1,23 @@
+<input type="text" placeholder="שם המתכון">
+<br>
+<select>
+    <option  *ngFor="let item of allCategories" value="item.code">
+        {{item.name}}
+    </option>
+</select>
+<br>
+
+<input type="number" placeholder="זמן הכנה">
+<br>
+
+<input type="text" placeholder="רכיבים">
+<br>
+
+<input type="text" placeholder="הוראות">
+<br>
+
+<input type="file" placeholder="הכנס תמונה">
+<br>
+
+<input type="checkbox" placeholder="האם לפרסם?">
+<button type="submit" (click)="AddRecipe()">הוסף</button>

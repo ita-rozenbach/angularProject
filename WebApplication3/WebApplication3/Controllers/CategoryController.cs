@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,23 +10,30 @@ using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
-    [RoutePrefix("api/Category")]
-    public class CategoryController : ApiController
+  [EnableCors(origins: "*", headers: "*", methods: "*")]
+  [RoutePrefix("api/Category")]
+  public class CategoryController : ApiController
+  {
+    [Route("getRecipeByCode")]
+    [HttpGet]
+
+    public Category getRecipeByCode(int code)
     {
-        [Route("getRecipeByCode")]
-        [HttpGet]
-
-        public Category getRecipeByCode(int code)
-        {
-            foreach(var item in DB.categoryList)
-            {
-                if (item.code == code)
-                    return item;
-            }
-            return null;
-
-        }
-
+      foreach (var item in DB.categoryList)
+      {
+        if (item.code == code)
+          return item;
+      }
+      return null;
+      
     }
+    [Route("getAllCategories")]
+    [HttpGet]
+    public List<Category> getAllCategories()
+    {
+      return DB.categoryList;
+    }
+
+
+  }
 }

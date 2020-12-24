@@ -13,7 +13,12 @@ clickedRecipe:Recipe;
     return this.http.get<Array<Recipe>>("http://localhost:56265/api/Recipe/getsRecipes");
   }
 
+  AddRecipe(r:Recipe){
+    return this.http.post<boolean>("http://localhost:56265/api/Recipe/AddRecipe",r);
+  }
+
   constructor(public http:HttpClient){ 
   }
+
 
 }

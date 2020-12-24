@@ -11,5 +11,9 @@ export class CategoryService {
     return this.http.get<Category>("http://localhost:56265/api/Category/getRecipeByCode?code="+code);
   }
 
+  getAllCategories(){
+    return this.http.get<Array<Category>>("http://localhost:56265/api/Category/getAllCategories");
+  }
+
   constructor(public http:HttpClient) { }
 }
