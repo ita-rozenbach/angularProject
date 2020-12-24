@@ -6,7 +6,7 @@ export class Recipe {
          public timeAtMinute:number,
         public LevelDifficulty:number,
         public  addRecipe: Date,
-        public ingredients:string  ,
+        public ingredients:string,
         public Preparation:string,
         public userCode:number,
         public image:string,

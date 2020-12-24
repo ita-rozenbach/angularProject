@@ -16,6 +16,7 @@ import { DetailsRecipeComponent } from './details-recipe/details-recipe.componen
 import { ListRecipeComponent } from './list-recipe/list-recipe.component';
 import { FullRecipeComponent } from './full-recipe/full-recipe.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,8 @@ const routes: Routes = [
 },
 {path:"listrecipe",component:ListRecipeComponent 
 },
+{path:"addrecipe",component:AddRecipeComponent 
+},
 ];
 
 @NgModule({
@@ -36,7 +39,8 @@ const routes: Routes = [
     RegisterComponent,
     DetailsRecipeComponent,
     ListRecipeComponent,
-    FullRecipeComponent
+    FullRecipeComponent,
+    AddRecipeComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(routes),HttpClientModule,FormsModule,CommonModule,ReactiveFormsModule, BrowserAnimationsModule
