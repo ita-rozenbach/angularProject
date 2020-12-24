@@ -14,7 +14,8 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
   }
   .myImage:hover{
-   opacity:0.6;
+   background-color: black;
+   opacity: 0.9;
   }
   .text {
     color: black;
@@ -63,3 +64,13 @@
     opacity: 1;
   }
 
+  .image:after {
+    content: '\A';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
